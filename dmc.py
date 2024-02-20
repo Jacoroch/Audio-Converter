@@ -35,23 +35,33 @@ def convert_to_m4a(file_path, output_path, start_time):
     elapsed_end = local_end_time - start_time
     print(f"Conversión a M4A completada. Tamaño: {get_file_size(output_path)} bytes. Comenzó en t={elapsed_start:.2f}s y terminó en t={elapsed_end:.2f}s")
 
-def convert_file_to_format(file_path, output_format, start_time):
-    base_name = os.path.splitext(file_path)[0]
-    output_path = f"{base_name}.{output_format}"
+def process_directory(directory_path, output_format, start_time, max_workers=13):
+    print("workers: "+ str(max_workers))
+    # Crear el nombre de la nueva carpeta añadiendo el formato al nombre original
+    new_directory_name = f"{directory_path} [{output_format}]"
+    # Crear la carpeta si no existe
+    if not os.path.exists(new_directory_name):
+        os.makedirs(new_directory_name)
+    
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        for root, _, files in os.walk(directory_path):
+            for file in files:
+                if file.lower().endswith('.aif'):
+                    file_path = os.path.join(root, file)
+                    # Construir la ruta de salida en la nueva carpeta
+                    base_name = os.path.splitext(file)[0]
+                    output_path = os.path.join(new_directory_name, f"{base_name}.{output_format}")
+                    # Enviar la ruta de salida correcta junto con el formato y el tiempo de inicio
+                    executor.submit(convert_file_to_format, file_path, output_path, output_format, start_time)
+
+
+def convert_file_to_format(file_path, output_path, output_format, start_time):
     if output_format == "mp3":
         convert_to_mp3(file_path, output_path, start_time)
     elif output_format == "wav":
         convert_to_wav(file_path, output_path, start_time)
     elif output_format == "m4a":
         convert_to_m4a(file_path, output_path, start_time)
-
-def process_directory(directory_path, output_format, start_time, max_workers=4):
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        for root, _, files in os.walk(directory_path):
-            for file in files:
-                if file.lower().endswith('.aif'):
-                    file_path = os.path.join(root, file)
-                    executor.submit(convert_file_to_format, file_path, output_format, start_time)
 
 
 def process_single_file(file_path, start_time):
