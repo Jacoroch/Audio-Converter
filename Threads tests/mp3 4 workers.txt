@@ -1,0 +1,24 @@
+MP3
+Ejecución 1: Tiempo final = 16.822s
+Ejecución 2: Tiempo final = 17.173s
+Ejecución 3: Tiempo final = 15.763s
+Ejecución 4: Tiempo final = 15.513s
+Ejecución 5: Tiempo final = 15.606s
+Ejecución 6: Tiempo final = 15.424s
+Ejecución 7: Tiempo final = 15.435s
+Ejecución 8: Tiempo final = 15.570s
+Ejecución 9: Tiempo final = 15.604s
+Ejecución 10: Tiempo final = 15.455s
+Ejecución 11: Tiempo final = 15.917s
+Ejecución 12: Tiempo final = 16.051s
+Ejecución 13: Tiempo final = 16.214s
+Ejecución 14: Tiempo final = 15.897s
+Ejecución 15: Tiempo final = 15.346s
+Ejecución 16: Tiempo final = 16.069s
+Ejecución 17: Tiempo final = 15.309s
+Ejecución 18: Tiempo final = 15.451s
+Ejecución 19: Tiempo final = 15.333s
+Ejecución 20: Tiempo final = 15.465s
+Promedio de tiempo de ejecución: 15.771s
+Menor tiempo de ejecución: 15.309s
+Mayor tiempo de ejecución: 17.173s
