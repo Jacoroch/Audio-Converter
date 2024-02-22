@@ -43,6 +43,7 @@ def process_directory(directory_path, output_format, start_time, max_workers=13)
     if not os.path.exists(new_directory_name):
         os.makedirs(new_directory_name)
     
+    #Crear los hilos para convertir los archivos en paralelo
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         for root, _, files in os.walk(directory_path):
             for file in files:
@@ -99,12 +100,12 @@ def process_single_file(file_path, start_time):
 
 if __name__ == "__main__":
     start_time = time.time()
-    exit_status = 0  # Estado de salida predeterminado como "éxito"
+    exit_status = 0  
 
     try:
         parser = argparse.ArgumentParser(description='Disc Music Compressor')
-        parser.add_argument('-f', '--file', help='El nombre del archivo o directorio a convertir', required=True)
-        parser.add_argument('-e', '--extension', help='Formato de salida para la conversión (requerido solo para directorios)', default='')
+        parser.add_argument('-f', '--file', required=True)
+        parser.add_argument('-e', '--extension', default='')
 
         args = parser.parse_args()
 
@@ -128,3 +129,6 @@ if __name__ == "__main__":
         exit_status = 1  
     finally:
         print("Estado de salida del proceso:"+ str(exit_status))
+        
+#python dmc.py -e wav -f "Up All Night"
+#python dmc.py -f "01 What Makes You Beautiful.aif"
