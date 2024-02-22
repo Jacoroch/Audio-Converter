@@ -1,0 +1,24 @@
+WAV
+Ejecución 1: Tiempo final = 3.000s
+Ejecución 2: Tiempo final = 2.938s
+Ejecución 3: Tiempo final = 2.842s
+Ejecución 4: Tiempo final = 3.133s
+Ejecución 5: Tiempo final = 3.021s
+Ejecución 6: Tiempo final = 2.848s
+Ejecución 7: Tiempo final = 3.000s
+Ejecución 8: Tiempo final = 3.015s
+Ejecución 9: Tiempo final = 2.916s
+Ejecución 10: Tiempo final = 2.870s
+Ejecución 11: Tiempo final = 2.937s
+Ejecución 12: Tiempo final = 2.954s
+Ejecución 13: Tiempo final = 2.982s
+Ejecución 14: Tiempo final = 2.931s
+Ejecución 15: Tiempo final = 3.010s
+Ejecución 16: Tiempo final = 2.951s
+Ejecución 17: Tiempo final = 2.912s
+Ejecución 18: Tiempo final = 2.857s
+Ejecución 19: Tiempo final = 3.030s
+Ejecución 20: Tiempo final = 2.954s
+Promedio de tiempo de ejecución: 2.955s
+Menor tiempo de ejecución: 2.842s
+Mayor tiempo de ejecución: 3.133s

@@ -1,0 +1,24 @@
+M4A
+Ejecución 1: Tiempo final = 41.591s
+Ejecución 2: Tiempo final = 41.704s
+Ejecución 3: Tiempo final = 41.695s
+Ejecución 4: Tiempo final = 41.600s
+Ejecución 5: Tiempo final = 41.967s
+Ejecución 6: Tiempo final = 41.601s
+Ejecución 7: Tiempo final = 41.558s
+Ejecución 8: Tiempo final = 41.649s
+Ejecución 9: Tiempo final = 41.659s
+Ejecución 10: Tiempo final = 41.671s
+Ejecución 11: Tiempo final = 41.667s
+Ejecución 12: Tiempo final = 41.688s
+Ejecución 13: Tiempo final = 41.671s
+Ejecución 14: Tiempo final = 41.576s
+Ejecución 15: Tiempo final = 41.703s
+Ejecución 16: Tiempo final = 41.726s
+Ejecución 17: Tiempo final = 41.609s
+Ejecución 18: Tiempo final = 41.568s
+Ejecución 19: Tiempo final = 41.669s
+Ejecución 20: Tiempo final = 41.701s
+Promedio de tiempo de ejecución: 41.664s
+Menor tiempo de ejecución: 41.558s
+Mayor tiempo de ejecución: 41.967s
